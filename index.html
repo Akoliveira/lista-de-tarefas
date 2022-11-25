@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+    </header>
+    
+     <main>
+        <ul></ul>
+     </main>  
+
+     <footer>
+        <input>
+        <button onclick="add()">Adicionar Tarefa</button>
+     </footer>
+
+    <script>
+    
+    // estado da aplicação
+    const tarefas = ['Estudar HTML', 'Estudar CSS', 'Estudar JS']
+
+        function add() {
+            const input = document.querySelector("input")
+            const tarefa = input.value
+            tarefas.push(tarefa)           
+            input.value = ""
+            render()
+        }
+
+        function render() {
+            const ul = document.querySelector("ul")
+            ul.innerHTML = null
+            
+            tarefas.forEach(function(tarefa) {
+                 const li = document.createElement("li")
+                 li.innerText = tarefa
+                 ul.appendChild(li)
+            })
+        }
+
+        render()
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: no-repeat center/cover url(imagens/task.jpg);
+}
+
+header {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+}
+
+main {
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.17 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    flex: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+main ul {
+    padding: 0px;
+    list-style: none;
+}
+
+main li {
+    border-bottom: 1px solid black;
+    padding: 5px 0px;
+}
+
+footer {
+    display: flex;
+    padding: 5px;
+}
+
+footer input {
+    flex: auto;
+    padding: 5px;
+}
